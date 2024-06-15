@@ -19,13 +19,13 @@ const validateInput = () => {
   let isValid = true;
 
   // Проверка имени пользователя
-  if (!newUser.name || /[<>]/.test(newUser.name)) {
+  if (!newUser.name || /[<>] /.test(newUser.name)) {
     newUser.error = 'Имя пользователя не должно содержать символы < или >.';
     isValid = false;
   }
 
   // Проверка пароля
-  if (!newUser.pswd || /[<>]/.test(newUser.pswd)) {
+  if (!newUser.pswd || /[<>] /.test(newUser.pswd)) {
     newUser.error = 'Пароль не должен содержать символы < или >.';
     isValid = false;
   }

@@ -28,12 +28,12 @@ const toggleScroll = () => {
 const validateInput = () => {
   let isValid = true;
 
-  if (!user.name || /[<>]/.test(user.name)) {
+  if (!user.name || /[<>] /.test(user.name)) {
     user.error = 'Имя пользователя не должно содержать символы < или >.';
     isValid = false;
   }
 
-  if (!comment.text || /[<>]/.test(comment.text)) {
+  if (!comment.text || /[<>] /.test(comment.text)) {
     comment.error = 'Текст не должен содержать символы < или >.';
     isValid = false;
   }

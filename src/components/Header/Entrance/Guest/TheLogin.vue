@@ -17,13 +17,13 @@ const validateInput = () => {
   let isValid = true;
 
   // Проверка имени пользователя
-  if (!user.name || /[<>]/.test(user.name)) {
+  if (!user.name || /[<>] /.test(user.name)) {
     user.error = 'Имя пользователя не должно содержать символы < или >.';
     isValid = false;
   }
 
   // Проверка пароля
-  if (!user.pswd || /[<>]/.test(user.pswd)) {
+  if (!user.pswd || /[<>] /.test(user.pswd)) {
     user.error = 'Пароль не должен содержать символы < или >.';
     isValid = false;
   }

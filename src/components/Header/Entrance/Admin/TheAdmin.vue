@@ -28,6 +28,7 @@ const closePopup = () => {
 
 const clearPopup = () => {
   // closePopup();
+  // TODO
   console.log('close');
 };
 </script>

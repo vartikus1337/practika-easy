@@ -1,9 +1,11 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, inject } from 'vue';
 import axios from 'axios';
 
 import IsSuccessful from '../IsSuccessful.vue';
 import IsError from '../IsError.vue';
+
+const data = inject('data');
 
 const errorPost = ref('');
 const success = ref('');
@@ -22,6 +24,9 @@ const uploadFile = async () => {
 
   const formData = new FormData();
   formData.append('file', file.value, fileName.value);
+  console.log(data.user.value.name);
+  formData.append('username', data.user.value.name);
+  formData.append('password', data.user.value.passAdmin);
 
   try {
     const response = await axios.post('http://localhost:3000/upload', formData, {

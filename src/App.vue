@@ -9,10 +9,10 @@ const apply = ref(false);
 
 const data = reactive({
   user: {
-    name: 'ad', // ''
-    isLogged: true, // false
-    isAdmin: true, // false
-    passAdmin: 'ad' // ''
+    name: '', // ''
+    isLogged: false, // false
+    isAdmin: false, // false
+    passAdmin: '' // ''
   },
   news: [],
   games: [],

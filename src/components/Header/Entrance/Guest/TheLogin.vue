@@ -21,7 +21,6 @@ const validateInput = () => {
     user.error = 'Имя пользователя не должно содержать спец символы.';
     isValid = false;
   }
-  console.log(isValid);
 
   // Проверка пароля
   if (!user.pswd || /[<>\\*+%/ ]/.test(user.pswd)) {
